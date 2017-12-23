@@ -30,7 +30,7 @@ function describe (obj) {
   return describeObject(obj)
 }
 
-describe.class = describeComponent
+describe.component = describeComponent
 describe.function = describeFunction
 describe.object = describeObject
 
