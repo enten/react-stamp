@@ -6,8 +6,8 @@ const isStampDescriptor = require('../is/stampDescriptor')
 const isReactComponent = require('../is/reactComponent')
 
 /**
- * 
- * @param {Object|Function|React.Component} obj 
+ *
+ * @param {Object|Function|React.Component} obj
  * @returns {Descriptor}
  */
 function describe (obj) {

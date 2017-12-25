@@ -1,6 +1,6 @@
 /**
- * 
- * @param {Descriptor} obj 
+ *
+ * @param {Descriptor} obj
  * @returns {boolean}
  */
 function isReactComponent (obj) {

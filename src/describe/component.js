@@ -1,6 +1,6 @@
 /**
- * 
- * @param {React.Component} obj 
+ *
+ * @param {React.Component} obj
  * @returns {Descriptor}
  */
 function describeComponent (obj) {
@@ -10,7 +10,7 @@ function describeComponent (obj) {
   for (let propName of propNames) {
     switch (propName) {
       case 'length':
-      break
+        break
 
       case 'displayName':
         if (!desc.staticProperties) {
@@ -20,7 +20,7 @@ function describeComponent (obj) {
         const propValue = obj[propName]
 
         desc.staticProperties[propName] = propValue
-      break
+        break
 
       case 'name':
         if (!desc.staticPropertyDescriptors) {
@@ -30,7 +30,7 @@ function describeComponent (obj) {
         const propDesc = Object.getOwnPropertyDescriptor(obj, propName)
 
         desc.staticPropertyDescriptors[propName] = propDesc
-      break
+        break
 
       case 'prototype':
         const Ctor = obj.prototype.constructor
@@ -52,7 +52,7 @@ function describeComponent (obj) {
         for (
           let proto = obj.prototype;
           proto !== Object.prototype;
-          proto = proto.__proto__
+          proto = proto.__proto__ // eslint-disable-line no-proto
         ) {
           const protoNames = Object.getOwnPropertyNames(proto)
 
@@ -70,7 +70,7 @@ function describeComponent (obj) {
             desc.methods[protoName] = proto[protoName]
           }
         }
-      break
+        break
 
       default:
         if (!desc.staticDeepProperties) {
@@ -78,7 +78,7 @@ function describeComponent (obj) {
         }
 
         desc.staticDeepProperties[propName] = obj[propName]
-      break
+        break
     }
   }
 

@@ -1,8 +1,8 @@
 const describeObject = require('./object')
 
 /**
- * 
- * @param {Function} fn 
+ *
+ * @param {Function} fn
  * @returns {Descriptor}
  */
 function describeFunction (fn) {
@@ -16,7 +16,7 @@ function describeFunction (fn) {
       case 'caller':
       case 'length':
       case 'prototype':
-      break
+        break
 
       case 'childContextTypes':
       case 'contextTypes':
@@ -26,12 +26,12 @@ function describeFunction (fn) {
       case 'propTypes':
       case 'state':
         obj[propName] = fn[propName]
-      break
+        break
 
       default:
         !obj.statics && (obj.statics = {})
         obj.statics[propName] = fn[propName]
-      break
+        break
     }
   }
 

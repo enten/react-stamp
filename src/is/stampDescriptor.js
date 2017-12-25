@@ -15,8 +15,8 @@ const DESCRIPTOR_PROP_NAMES = [
 ]
 
 /**
- * 
- * @param {any} obj 
+ *
+ * @param {any} obj
  * @returns {boolean}
  */
 function isStampDescriptor (obj) {

@@ -1,6 +1,6 @@
 /**
- * 
- * @param {Object} obj 
+ *
+ * @param {Object} obj
  * @returns {Descriptor}
  */
 function describeObject (obj) {
